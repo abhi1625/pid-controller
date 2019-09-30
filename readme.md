@@ -1,12 +1,17 @@
-# PID COntroller
+# PID Controller
 [![Build Status](https://travis-ci.org/abhi1625/pid-controller.svg?branch=master)](https://travis-ci.org/abhi1625/pid-controller)
 [![Coverage Status](https://coveralls.io/repos/github/abhi1625/pid-controller/badge.svg?branch=master)](https://coveralls.io/github/abhi1625/pid-controller?branch=master)
 ---
 
-## Authors
+## Authors - Part 1
 
 - Driver    : [abhi1625](https://github.com/abhi1625)
 - Navigator : [namangupta98](https://github.com/namangupta8)
+
+## Authors - Part 2 
+
+- Driver    : [swagquotient0](https://github.com/swagquotient0)
+- Navigator : [gautam-balachandran](https://github.com/Gautam-Balachandran)
 
 ## Overview
 
