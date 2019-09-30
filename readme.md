@@ -37,3 +37,6 @@ make
 make code_coverage
 ```
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+
+## To-Do
+- 94\% coverage due to getDt() method in class PID. Can be used more or cna be removed.
