@@ -19,6 +19,7 @@ int main() {
     cout << "Kp is :" << pid->getKp() << endl;
     cout << "Kd is :" << pid->getKd() << endl;
     cout << "Ki is :" << pid->getKi() << endl;
+    cout << "dt is :" << pid->getDt() << endl;
 
     double actualVel = 10;
     double setpointVel = 20;

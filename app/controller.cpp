@@ -101,18 +101,16 @@ double PID::getDt() {
  *         given setpoint value within a set rise-time.
  */
 double PID::computePID(double setpointVel,  double actualVel) {
-    //compute error 
+    // compute error
     double err = setpointVel - actualVel;
-
-    //compute derivative of error
+    // compute derivative of error
     double errDot = (err - prevErr) / dt;
-    
-    //compute integraDotl error
+    // compute integraDotl error
     errSum += err * dt;
 
-    //compute output from pid 
+    // compute output from pid
     double ctrlInput = kp * err + kd * errDot + ki * errSum;
 
-    prevErr = err; //save current error for next iteration
+    prevErr = err;  // save current error for next iteration
     return ctrlInput;
 }
