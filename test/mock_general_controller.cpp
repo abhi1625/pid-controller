@@ -1,6 +1,6 @@
-/**@file general_controller.hpp
- * @brief Header file for General PID controller.
- *        Contains required headers and methods.
+/**@file mock_general_controller.cpp
+ * @brief Source file for mock tests of PID controller.
+ *        Contains required mock tests for the PID params class.
  *
  * Detailed description follows here.
  * @author     : Abhinav Modi
@@ -23,7 +23,7 @@ using ::testing::_;
  * PIDparams class. Checks using GMOCK object if methods are 
  * correctly defined and return expected values.
  */
-TEST (mockPIDTest, setparamsTest) {
+TEST(mockPIDTest, setparamsTest) {
     mockPIDparams mockparams;
     EXPECT_CALL(mockparams, setKp(_)).WillOnce(Return(true));
     EXPECT_CALL(mockparams, setKd(_)).WillOnce(Return(true));
@@ -32,7 +32,7 @@ TEST (mockPIDTest, setparamsTest) {
     mockparams.setKp(0.0);
     mockparams.setKd(0.0);
     mockparams.setKi(0.0);
-    mockparams.setDt(1.0); 
+    mockparams.setDt(1.0);
 }
 
 /**
@@ -44,12 +44,12 @@ TEST(mockPIDTest, computePIDTest) {
     mockPIDparams mockparams;
     PID pid;
     EXPECT_CALL(mockparams, computePID(_, _)).Times(1).WillOnce(Return(true));
-    mockparams.computePID(20,20);
+    mockparams.computePID(20, 20);
     pid.setKp(1);
     pid.setKd(1);
     pid.setKi(1);
     pid.setDt(1);
-    EXPECT_EQ(0,pid.computePID(20,20));
+    EXPECT_EQ(0, pid.computePID(20, 20));
 }
 
 

@@ -1,5 +1,9 @@
-Done processing ./app/main.cpp
 Done processing ./app/controller.cpp
+Done processing ./app/general_controller.cpp
+Done processing ./app/main.cpp
 Done processing ./include/controller.hpp
+Done processing ./include/general_controller.hpp
 Done processing ./test/main.cpp
+Done processing ./test/mock_general_controller.cpp
+Done processing ./test/mock_general_controller.hpp
 Done processing ./test/test.cpp

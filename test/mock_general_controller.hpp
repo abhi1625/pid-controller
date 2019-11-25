@@ -1,5 +1,5 @@
-/**@file general_controller.hpp
- * @brief Header file for General PID controller.
+/**@file mock_general_controller.hpp
+ * @brief Header file for Mock testing of General PID controller.
  *        Contains required headers and methods.
  *
  * Detailed description follows here.
@@ -8,8 +8,8 @@
  * @copyright  : This code is developed for programming exercises in the 
  *               course ENPM808X. Do not use without citation.
  */
-#ifndef INCLUDE_MOCK_GENERAL_CONTROLLER_HPP_
-#define INCLUDE_MOCK_GENERAL_CONTROLLER_HPP_
+#ifndef TEST_MOCK_GENERAL_CONTROLLER_HPP_
+#define TEST_MOCK_GENERAL_CONTROLLER_HPP_
 
 #include<gtest/gtest.h>
 #include<gmock/gmock.h>
@@ -37,7 +37,7 @@ class mockPIDparams : public PIDparams {
          * @param _Ki - gain value Ki 
          * @return bool
          */        
-        MOCK_METHOD1(setKi,bool(double _Ki));
+        MOCK_METHOD1(setKi, bool(double _Ki));
 
         /**
          * @brief Mock method for setDt.         
@@ -54,7 +54,6 @@ class mockPIDparams : public PIDparams {
          *         given setpoint value within a set rise-time.
          */
         MOCK_METHOD2(computePID, double(double setpointVel, double actualVel));
-
 };
 
-#endif  // INCLUDE_MOCK_GENERAL_CONTROLLER_HPP_
+#endif  // TEST_MOCK_GENERAL_CONTROLLER_HPP_
