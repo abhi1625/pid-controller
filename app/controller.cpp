@@ -9,17 +9,18 @@
  *               course ENPM808X. Do not use without citation.
  */
 #include "../include/controller.hpp"
+#include "../include/general_controller.hpp"
 
 /**
  * @brief default constructor
  */
-PID::PID()
-    : kp(0.0),
-      kd(0.0),
-      ki(0.0),
-      dt(1.0),
-      prevErr(0.0),
-      errSum(0.0) {
+PID::PID() {
+    kp = 0.0;
+    kd = 0.0;
+    ki = 0.0;
+    dt = 1.0;
+    prevErr = 0.0;
+    errSum = 0.0;
 }
 
 /**
@@ -27,45 +28,12 @@ PID::PID()
  */
 PID::~PID() {
 }
-
-/**
- * @brief setKp sets the proportional gain Kp for the PID controller
- * @param Kp - gain value Kp 
- */
-void PID::setKp(double _kp) {
-    this->kp = _kp;  // assign given value to the private variable kp
-}
-
-/**
- * @brief setKd sets the derivative gain Kd for the PID controller
- * @param Kd - gain value Kd 
- */ 
-void PID::setKd(double _kd) {
-    this->kd = _kd;  // assign given value to the private variable kd
-}
-
-/**
- * @brief setKi sets the integral gain Ki for the PID controller
- * @param Ki - gain value Ki 
- */ 
-void PID::setKi(double _ki) {
-    this->ki = _ki;  // assign given value to the private variable ki
-}
-
-/**
- * @brief setDt sets the discretization time-step dt for the PID.         
- * @param dt - discretization time-step dt 
- */
-void PID::setDt(double _dt) {
-    this->dt = _dt;  // assign given value to the private variable dt
-}
-
 /**
  * @brief getKp provides access to private variable Kp.         
  * @return Kp  
  */
 double PID::getKp() {
-    return this->kp;
+    return kp;
 }
 
 /**
@@ -73,7 +41,7 @@ double PID::getKp() {
  * @return Kd  
  */
 double PID::getKd() {
-    return this->kd;
+    return kd;
 }
 
 /**
@@ -81,7 +49,7 @@ double PID::getKd() {
  * @return Ki  
  */
 double PID::getKi() {
-    return this->ki;
+    return ki;
 }
 
 /**
@@ -89,7 +57,7 @@ double PID::getKi() {
  * @return dt  
  */
 double PID::getDt() {
-    return this->dt;
+    return dt;
 }
 
 /**
