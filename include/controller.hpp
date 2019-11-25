@@ -13,12 +13,13 @@
 
 #include <iostream>
 #include <memory>
+#include "general_controller.hpp"
 
 using std :: cout;
 using std :: cin;
 using std :: endl;
 
-class PID {
+class PID : public PIDparams{
  public:
         /**
          * @brief default constructor
@@ -34,30 +35,6 @@ class PID {
          *         given setpoint value within a set rise-time.
          */
         double computePID(double setpointVel, double actualVel);
-
-        /**
-         * @brief setKp sets the proportional gain Kp for the PID controller
-         * @param _Kp - gain value Kp 
-         */
-        void setKp(double _Kp);
-
-        /**
-         * @brief setKd sets the derivative gain Kd for the PID controller
-         * @param _Kd - gain value Kd 
-         */        
-        void setKd(double _Kd);
-
-        /**
-         * @brief setKi sets the integral gain Ki for the PID controller
-         * @param _Ki - gain value Ki 
-         */        
-        void setKi(double _Ki);
-
-        /**
-         * @brief setDt sets the discretization time-step dt for the PID.         
-         * @param _dt - discretization time-step dt 
-         */
-        void setDt(double _dt);
 
         /**
          * @brief getKp provides access to private variable Kp.         
@@ -87,14 +64,6 @@ class PID {
          * @brief default destructor
          */
         ~PID();
-
- private:
-        double kp;                  // proportianal gain term
-        double kd;                  // derivative gain term
-        double ki;                  // integral gain term
-        double dt;                  // discretization time-step
-        double prevErr;             // error in the previous time step
-        double errSum;              // cumulative error term
 };
 
 #endif  // INCLUDE_CONTROLLER_HPP_
