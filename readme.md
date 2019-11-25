@@ -40,3 +40,12 @@ This generates a index.html page in the build/coverage sub-directory that can be
 
 ## To-Do
 - 94\% coverage due to getDt() method in class PID. Can be used more or cna be removed.
+
+## GMock
+ - Class mocked - PIDparams in general_controller.hpp
+ - Added virtual class to implement GMock tests
+ - Class diagram updated as per modified structure
+ You can run mock tests once you have build the package using:
+```
+./test/cpp-test
+```
