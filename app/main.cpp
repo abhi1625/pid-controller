@@ -8,6 +8,7 @@
  *               course ENPM808X. Do not use without citation.
  */
 #include "../include/controller.hpp"
+#include "../include/general_controller.hpp"
 
 int main() {
     std::shared_ptr<PID> pid = std::make_shared<PID>();
